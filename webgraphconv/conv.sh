@@ -1,0 +1,1 @@
+java -cp "lib/*" -server it.unimi.dsi.webgraph.ArcListASCIIGraph $1 $1.txt
