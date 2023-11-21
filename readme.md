@@ -2,7 +2,7 @@
 
 The supplementary files are organized as follows.
 
-In the first section,  we describe format of `Results.xlsx`, which contains detailed results of our experiments.
+In the first section,  we describe the sheets located under the `results` folder, which contains detailed results of our experiments.
 
 In the second section, we describe how to obtain the datasets involved in our experiments.
 
@@ -10,21 +10,21 @@ In the third section, we describe the usage of source codes provided with this d
 
 ## Experimental Results
 
-There are 13 sheets in the `Results.xlsx`.
+The sheets in `Unweighted.xlsx` and `Weighted.xlsx` are described as follows.
 
-* Results: We list the data obtained for each experiment separately
-* Stats_Unweighted: Basic statistics of the graphs we tested.
-* Stats_Weighted: We use random seed fixed from 1 to 10 to generate random positive integral weights for each arc. This sheet lists the sum of arc weights of the generated weighted digraphs.
-* SolutionQuality_Heuristics: The size of the solutions found on unweighted graphs by the heuristics we tested.
-* SolutionQuality_Heuristics_W: The size of the solutions found on weighted graphs by the heuristics we tested, measured by the weight of the feedback arc set divided by the sum of arc weights in the random graph, listed in the sheet ‘Stats_Weighted’.
-* RunningTime_Heuristics: Running time of the heuristics on unweighted graphs.
-* RunningTime_Heuristics_W: Running time of the heuristics on weighted graphs.
-* NumArcsAfterReduction: Number of arcs after running the reduction algorithms we tested.
-* ArcWeightsAfterReduction: Sum of arc weights after running the reduction algorithms we tested.
-* RunningTime_Reduction: Running time of the reductions we tested.
-* Summary: Tables that summarizes our results.
-* ResultsHeuristicNormalized: Intermediate sheet for calculating the standard deviation.
-* StandardDeviation: Intermediate sheet for calculating the standard deviation.
+* GraphStats: Basic statistics of the graphs we tested. For the weighted case, we use random seed fixed from 1 to 10 to generate random positive integral weights for each arc, and the sheet lists the sum of arc weights of the generated weighted digraphs. This sheet is also provided in the `.csv` format(`UnweightedStats.csv`,`WeightedStats.csv`).
+* SolRaw: Raw experimental result for heuristics. This sheet is also provided in the `.csv` format(`UnweightedSol.csv` ,`WeightedSol.csv`).
+* SolPct: The size of the solutions obtained by the heuristics measured by the percentage to the size(sum of weights) of the arc set, aggregated per (graph, algorithm).
+* SolPctTbl: Another representation of SolPct.
+* SolTime: The running time of heuristics, aggregated per (graph, algorithm).
+* RedRaw: Raw experimental result for reduction algorithms. This sheet is also provided in the `.csv` format (`UnweightedRed.csv`).
+* RedPct: The size of the reduced graph measured by the percentage to the arc set size, aggregated per (graph, algorithm).
+* RedPctTbl: Another representation of RedPct.
+* RedTime: The running time of reduction algorithms, aggregated per (graph, algorithm).
+
+There are two sheets in `Gap.xlsx`, `Raw` and `Tbl`. The first is the same as SolRaw for `Unweighted.xlsx`, and the second is the same as SolPctTbl for `Unweighted.xlsx`, with additional columns that contains graph statics. We provide the `.csv` format of the first table(`Gap.csv`).
+
+We are able to open the new `.xlsx` sheets with `LibreOffice 7.3.7.2 30(Build:2)` on WSL 2 Ubuntu 22.04.
 
 ## Datasets
 
